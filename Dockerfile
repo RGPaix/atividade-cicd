@@ -2,6 +2,8 @@
     FROM eclipse-temurin:17-jdk-jammy as builder
     WORKDIR /app
     COPY . .
+    # Instala Maven
+    RUN apt-get update && apt-get install -y maven
     RUN mvn -B package -DskipTests
 
 # --- Estágio 2: Runtime ---
