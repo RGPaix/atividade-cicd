@@ -30,4 +30,4 @@ jobs:
 
       # 3. Roda o build e os testes.
       - name: Build e Testes com Maven
-        run: mvn -B verify
+        run: mvn -B -f gerenciador-tarefas/pom.xml verify
